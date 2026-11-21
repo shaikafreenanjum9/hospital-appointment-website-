@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePlus Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>✚ CarePlus</h2>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#appointment">Book Appointment</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Home -->
+<section class="hero" id="home">
+    <div class="hero-text">
+        <span class="badge">YOUR HEALTH, OUR PRIORITY</span>
+        <h1>Healthcare You Can <span>Trust</span></h1>
+        <p>
+            Get quality healthcare from experienced doctors.
+            Book your appointment online quickly and easily.
+        </p>
+        <a href="#appointment" class="btn">Book Appointment →</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+             alt="Doctor">
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+    <h2 class="heading">Our Medical Services</h2>
+    <p class="subheading">Quality care for every patient</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">❤️</div>
+            <h3>Cardiology</h3>
+            <p>Heart health and cardiovascular care.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Neurology</h3>
+            <p>Care for brain and nervous system.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦴</div>
+            <h3>Orthopedics</h3>
+            <p>Bone, joint and muscle treatment.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👶</div>
+            <h3>Pediatrics</h3>
+            <p>Special healthcare for children.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🩺</div>
+            <h3>General Medicine</h3>
+            <p>Regular checkups and consultations.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦷</div>
+            <h3>Dental Care</h3>
+            <p>Healthy teeth and beautiful smiles.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Doctors -->
+<section class="section doctors-section" id="doctors">
+    <h2 class="heading">Meet Our Doctors</h2>
+    <p class="subheading">Experienced professionals for your health</p>
+
+    <div class="cards doctor-cards">
+
+        <div class="doctor">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80"
+                 alt="Doctor Ananya">
+            <h3>Dr. Ananya Sharma</h3>
+            <p>Cardiologist</p>
+            <button onclick="chooseDoctor('Dr. Ananya Sharma')">
+                Book Now
+            </button>
+        </div>
+
+        <div class="doctor">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80"
+                 alt="Doctor Rahul">
+            <h3>Dr. Rahul Verma</h3>
+            <p>General Physician</p>
+            <button onclick="chooseDoctor('Dr. Rahul Verma')">
+                Book Now
+            </button>
+        </div>
+
+        <div class="doctor">
+            <img src="https://www.sagarhospitals.in/doctors/dr-priyanka-h-k/"
+                 alt="Doctor Priya">
+            <h3>Dr. Priya Reddy</h3>
+            <p>Pediatrician</p>
+            <button onclick="chooseDoctor('Dr. Priya Reddy')">
+                Book Now
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Appointment -->
+<section class="appointment" id="appointment">
+    <h2>Book Your Appointment</h2>
+    <p>Fill in your details to schedule a consultation</p>
+
+    <form id="appointmentForm">
+
+        <label>Patient Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter email address" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="10-digit mobile number"
+               pattern="[0-9]{10}" maxlength="10" required>
+
+        <label>Select Doctor</label>
+        <select id="doctor" required>
+            <option value="">Choose a doctor</option>
+            <option>Dr. Ananya Sharma</option>
+            <option>Dr. Rahul Verma</option>
+            <option>Dr. Priya Reddy</option>
+            <option>Other Specialist</option>
+        </select>
+
+        <label>Appointment Date</label>
+        <input type="date" id="date" required>
+
+        <label>Appointment Time</label>
+        <select id="time" required>
+            <option value="">Select time</option>
+            <option>09:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>02:00 PM</option>
+            <option>03:00 PM</option>
+            <option>04:00 PM</option>
+            <option>05:00 PM</option>
+        </select>
+
+        <label>Message (Optional)</label>
+        <textarea id="message" placeholder="Write your message"></textarea>
+
+        <button type="submit" class="submit-btn">
+            Confirm Appointment
+        </button>
+    </form>
+
+    <div id="result"></div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+    <h2 class="heading">Contact Us</h2>
+
+    <div class="contact-box">
+        <p>📍 CarePlus Hospital, Andhra Pradesh, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ careplus@example.com</p>
+        <p>🕒 Monday – Saturday | 9 AM – 6 PM</p>
+    </div>
+</section>
+
+<footer>
+    <h3>✚ CarePlus Hospital</h3>
+    <p>Your health is our priority.</p>
+    <p>© 2026 CarePlus | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
